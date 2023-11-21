@@ -17,7 +17,7 @@ def get_subscription_info():
 def display_subscription_info(subscriptions):
     print("\nSubscription Information:")
     for subscription, payment_date in subscriptions.items():
-        print("{}: {}".format(subscription, payment_date))
+        print(subscription + ": " + payment_date)
 
 if __name__ == "__main__":
     print("Welcome to the Subscription Tracker!")
