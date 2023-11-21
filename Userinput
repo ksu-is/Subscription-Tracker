@@ -1,0 +1,29 @@
+def get_subscription_info():
+    subscriptions = {}
+
+    while True:
+        subscription_name = input("Enter subscription name (or 'exit' to stop): ")
+        
+        if subscription_name.lower() == 'exit':
+            break
+
+        payment_date = input("Enter payment date for {} (MM/DD/YYYY): ".format(subscription_name))
+        
+        # Store subscription information in the dictionary
+        subscriptions[subscription_name] = payment_date
+
+    return subscriptions
+
+def display_subscription_info(subscriptions):
+    print("\nSubscription Information:")
+    for subscription, payment_date in subscriptions.items():
+        print(subscription + ": " + payment_date)
+
+if __name__ == "__main__":
+    print("Welcome to the Subscription Tracker!")
+
+    # Get subscription information from the user
+    user_subscriptions = get_subscription_info()
+
+    # Display the collected subscription information
+    display_subscription_info(user_subscriptions)
