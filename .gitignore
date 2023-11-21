@@ -1,12 +1,18 @@
+# Ignore build artifacts, dependencies, and temporary files
+
 /_build
 /cover
 /deps
 erl_crash.dump
 *.ez
 
+# Ignore temporary and generated files
+
 tmp
 rel/releases
 prod.secrets.exs
 config/ci/shipit.local.sh
 
+# Ignore Elixir LS configuration
 .elixir_ls
+
