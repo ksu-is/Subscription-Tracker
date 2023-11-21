@@ -10,7 +10,7 @@
 
 ✓- Make edits and changes to code
 
-x-  Get a code for user input where they fill out information related to their subscirtion and day pf payements.
+✓ -  Get a code for user input where they fill out information related to their subscirtion and day pf payements.
 
 x- Desgin and make app nice
 
