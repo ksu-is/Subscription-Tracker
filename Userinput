@@ -1,3 +1,5 @@
+import datetime
+
 def get_subscription_info():
     subscriptions = {}
 
@@ -7,8 +9,17 @@ def get_subscription_info():
         if subscription_name.lower() == 'exit':
             break
 
-        payment_date = input("Enter payment date for {} (MM/DD/YYYY): ".format(subscription_name))
-        
+        while True:
+            payment_date = input("Enter payment date for {} (MM/DD/YYYY): ".format(subscription_name))
+
+            # Validate the entered date format
+            try:
+                # Attempt to convert the input to a datetime object
+                payment_date_obj = datetime.datetime.strptime(payment_date, "%m/%d/%Y")
+                break  # Break the loop if the input is a valid date
+            except ValueError:
+                print("Invalid date format. Please enter the date in MM/DD/YYYY format.")
+
         # Store subscription information in the dictionary
         subscriptions[subscription_name] = payment_date
 
